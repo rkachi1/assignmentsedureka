@@ -1,0 +1,18 @@
+<table class="table text-center table-bordered">
+    <tr>
+        <th>Employee ID</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Department</th>
+        <th>City</th>
+        <th>Email</th>
+    </tr>
+    <tr *ngFor="let employee of employees" appColor>
+        <td>{{ employee.id }}</td>
+        <td>{{ employee.firstname }}</td>
+        <td>{{ employee.lastname }}</td>
+        <td>{{ employee.Dept }} </td>
+        <td>{{ employee.City }}</td>
+        <td>{{ employee.email }}</td>
+    </tr>
+</table>

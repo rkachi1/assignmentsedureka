@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { EmployeeComponent } from './components/employee/employee.component';
 import { EmployeeService } from './services/employee.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ColorDirective } from './directives/color.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    ColorDirective
   ],
   imports: [
     BrowserModule,
