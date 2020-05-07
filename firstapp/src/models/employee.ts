@@ -5,4 +5,6 @@ export class Employee{
     Dept:String;
     City:String;
     email:String;
+    salary:number;
+    dateofbirth:"MM/DD/YYYY";
 }

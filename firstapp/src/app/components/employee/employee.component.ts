@@ -12,6 +12,7 @@ import { Employee } from 'src/models/employee';
 export class EmployeeComponent implements OnInit {
 
   employees:Employee[] = [];
+
   constructor(private http:HttpClient,private employeeservice:EmployeeService,private router:Router) { }
 
   ngOnInit(): void {

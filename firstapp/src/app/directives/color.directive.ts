@@ -12,7 +12,6 @@ export class ColorDirective {
   @HostListener('mouseenter')onMouseEnter(){
     this.elementref.nativeElement.style.fontWeight = 'bold';
     this.elementref.nativeElement.style.backgroundColor = 'grey';
-
   }
 
   @HostListener('mouseleave')onMouseLeave(){

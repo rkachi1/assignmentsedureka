@@ -6,6 +6,8 @@
         <th>Department</th>
         <th>City</th>
         <th>Email</th>
+        <th>Salary</th>
+        <th>Date of Birth </th>
     </tr>
     <tr *ngFor="let employee of employees" appColor>
         <td>{{ employee.id }}</td>
@@ -14,5 +16,7 @@
         <td>{{ employee.Dept }} </td>
         <td>{{ employee.City }}</td>
         <td>{{ employee.email }}</td>
+        <td>{{ employee.salary | currency }}</td>
+        <td>{{ employee.dateofbirth | date | uppercase }}</td>
     </tr>
 </table>

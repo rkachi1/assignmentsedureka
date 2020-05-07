@@ -6,7 +6,9 @@
         "lastname":"Kachii Kadambi",
         "Dept":"Biology",
         "City":"Bangalore",
-        "email":"madhankk8@gmail.com" 
+        "email":"madhankk8@gmail.com",
+        "salary":12000,
+        "dateofbirth":"05/29/1995"
     },
     {
         "id":2,
@@ -14,7 +16,9 @@
         "lastname":"kk",
         "Dept":"Engineering",
         "City":"Mumbai",
-        "email":"abc@gmail.com"
+        "email":"abc@gmail.com",
+        "salary":30000,
+        "dateofbirth":"03/12/1995"
     },
     {
         "id":3,
@@ -22,7 +26,9 @@
         "lastname":"xyz",
         "Dept":"Engineering",
         "City":"Mumbai",
-        "email":"abc@gmail.com"
+        "email":"abc@gmail.com",
+        "salary":50000,
+        "dateofbirth":"01/12/1993"
     }
 ]
 }
