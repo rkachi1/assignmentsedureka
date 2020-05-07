@@ -1,0 +1,28 @@
+{
+    "Employee":[
+    {
+        "id":1,
+        "firstname":"Rangarajan",
+        "lastname":"Kachii Kadambi",
+        "Dept":"Biology",
+        "City":"Bangalore",
+        "email":"madhankk8@gmail.com" 
+    },
+    {
+        "id":2,
+        "firstname":"Madhan",
+        "lastname":"kk",
+        "Dept":"Engineering",
+        "City":"Mumbai",
+        "email":"abc@gmail.com"
+    },
+    {
+        "id":3,
+        "firstname":"abc",
+        "lastname":"xyz",
+        "Dept":"Engineering",
+        "City":"Mumbai",
+        "email":"abc@gmail.com"
+    }
+]
+}
