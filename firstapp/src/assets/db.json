@@ -30,5 +30,29 @@
         "salary":50000,
         "dateofbirth":"01/12/1993"
     }
+],
+
+"Employeenew":[
+    {
+        "id":1, 
+        "name":"Kasimedu",
+        "salary":90000,
+        "age":45,
+        "image":"employee.png"
+    },
+    {
+        "id":2,
+        "name":"Aadi",
+        "salary":60000,
+        "age":23,
+        "image":"employee.png"
+    },
+    {
+        "id":3,
+        "name":"Akash",
+        "salary":60000,
+        "age":12,
+        "image":"employee.png"
+    }
 ]
 }

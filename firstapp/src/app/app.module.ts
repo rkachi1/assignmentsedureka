@@ -7,12 +7,14 @@ import { EmployeeComponent } from './components/employee/employee.component';
 import { EmployeeService } from './services/employee.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ColorDirective } from './directives/color.directive';
+import { NewemployeeComponent } from './components/newemployee/newemployee.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeComponent,
-    ColorDirective
+    ColorDirective,
+    NewemployeeComponent
   ],
   imports: [
     BrowserModule,

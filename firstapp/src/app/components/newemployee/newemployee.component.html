@@ -1,0 +1,18 @@
+<table class="table table-bordered text-center">
+    <thead>
+        <th>Employee ID</th>
+        <th>Employee name</th>
+        <th>Employee Salary</th>
+        <th>Employee age</th>
+        <th>Profile image</th>
+    </thead>
+    <tbody *ngFor="let emp of newemployees">
+        <tr>
+            <td>{{ emp.id }}</td>
+            <td>{{ emp.name }}</td>
+            <td>{{ emp.salary}}</td>
+            <td>{{ emp.age }}</td>
+            <td><img src="../../../assets/employee.png" width="100px" height="100px"></td>
+        </tr>
+    </tbody>
+</table>
