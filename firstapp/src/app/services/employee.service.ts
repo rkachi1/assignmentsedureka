@@ -17,6 +17,8 @@ export class EmployeeService {
   
   newemployees:employee[] =[];
 
+  mockurl:String = "http://dummy.restapiexample.com/api/v1/employees";
+
   constructor(private http:HttpClient) {
 
   }
@@ -28,6 +30,10 @@ export class EmployeeService {
 
   getnewEmployees():Observable<employee[]>{
     return this.http.get<employee[]>("http://localhost:3000/employeenew",{headers:headeroptions});
+  }
+
+  getemployeesfromurl(){
+    return this.http.get("http://dummy.restapiexample.com/api/v1/employees",{headers:headeroptions});
   }
 
 }

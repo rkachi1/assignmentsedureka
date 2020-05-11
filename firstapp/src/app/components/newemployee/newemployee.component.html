@@ -6,13 +6,13 @@
         <th>Employee age</th>
         <th>Profile image</th>
     </thead>
-    <tbody *ngFor="let emp of newemployees">
-        <tr>
+    <tbody>
+        <tr *ngFor="let emp of employees.data">
             <td>{{ emp.id }}</td>
-            <td>{{ emp.name }}</td>
-            <td>{{ emp.salary}}</td>
-            <td>{{ emp.age }}</td>
-            <td><img src="../../../assets/employee.png" width="100px" height="100px"></td>
+            <td>{{ emp.employee_name }}</td>
+            <td>{{ emp.employee_salary }}</td>
+            <td>{{ emp.employee_age }}</td>
+            <td>{{ emp.profile_image }}</td>
         </tr>
     </tbody>
 </table>

@@ -10,12 +10,15 @@ import { employee } from 'src/models/employeenew';
 export class NewemployeeComponent implements OnInit {
 
   newemployees:employee[]=[];
+
+  employees:any = [];
+
   constructor(private employeeservice:EmployeeService) { 
 
   }
 
   ngOnInit(): void {
-    this.getnewEmployeedetails();
+    this.getemployeedetailsfromurl();
   }
 
   getnewEmployeedetails(){
@@ -24,4 +27,9 @@ export class NewemployeeComponent implements OnInit {
     })
   }
 
+  getemployeedetailsfromurl(){
+      this.employeeservice.getemployeesfromurl().subscribe(data=>{
+      this.employees = data;    
+    })
+  }
 }

@@ -8,13 +8,15 @@ import { EmployeeService } from './services/employee.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ColorDirective } from './directives/color.directive';
 import { NewemployeeComponent } from './components/newemployee/newemployee.component';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeComponent,
     ColorDirective,
-    NewemployeeComponent
+    NewemployeeComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
