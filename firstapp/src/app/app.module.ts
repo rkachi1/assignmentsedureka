@@ -9,6 +9,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { ColorDirective } from './directives/color.directive';
 import { NewemployeeComponent } from './components/newemployee/newemployee.component';
 import { FilterPipe } from './pipes/filter.pipe';
+import { HomeComponent } from './components/home/home.component';
+import { ProductComponent } from './components/product/product.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { FilterPipe } from './pipes/filter.pipe';
     EmployeeComponent,
     ColorDirective,
     NewemployeeComponent,
-    FilterPipe
+    FilterPipe,
+    HomeComponent,
+    ProductComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
