@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Employee } from 'src/models/employee';
 import { Observable } from 'rxjs';
 import { employee } from 'src/models/employeenew';
-
+import { Product } from '../../models/product';
 
 const headeroptions = new HttpHeaders({'Content-Type':'application/json'});
 @Injectable({
@@ -16,6 +16,8 @@ export class EmployeeService {
   employees:Employee[]=[];
   
   newemployees:employee[] =[];
+
+  products:Product[] = [];
 
   mockurl:String = "http://dummy.restapiexample.com/api/v1/employees";
 
@@ -35,5 +37,7 @@ export class EmployeeService {
   getemployeesfromurl(){
     return this.http.get("http://dummy.restapiexample.com/api/v1/employees",{headers:headeroptions});
   }
+
+
 
 }

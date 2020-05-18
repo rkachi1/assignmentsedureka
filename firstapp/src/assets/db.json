@@ -54,5 +54,28 @@
         "age":12,
         "image":"employee.png"
     }
-]
+],
+    "product":[
+        {
+            "id":1,
+            "name":"iphone7",
+            "description":"Made in China",
+            "price":"3000",
+            "image":"iphone7.jpg"
+        },
+        {
+            "id":2,
+            "name":"iphone8",
+            "description":"Manufactured in USA made in china ",
+            "price":"400",
+            "image":"iphone8.jpg"
+        },
+        {
+            "id":3,
+            "name":"iphone7 plus",
+            "description":"Manufactured in USA made in china ",
+            "price":"400",
+            "image":"iphone7.jpg"
+        }
+    ]
 }

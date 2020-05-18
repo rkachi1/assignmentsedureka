@@ -5,6 +5,7 @@ import { EmployeeComponent } from './components/employee/employee.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ProductComponent } from './components/product/product.component';
 import { NewemployeeComponent } from './components/newemployee/newemployee.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
 
 
 const routes: Routes = [
@@ -13,7 +14,9 @@ const routes: Routes = [
   {path:'newemployee',component:NewemployeeComponent,pathMatch:'full'},
   {path:'product', component:ProductComponent,pathMatch:'full'},
   {path:'contact', component:ContactComponent,pathMatch:'full'},
-  {path:'',component:EmployeeComponent,pathMatch:'full'}
+  {path:'',component:EmployeeComponent,pathMatch:'full'},
+  {path:'products',component:ProductComponent,pathMatch:'full'},
+  {path:'productlist/:id',component:ProductListComponent,pathMatch:'full'}
 ];
 
 @NgModule({

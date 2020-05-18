@@ -1,0 +1,17 @@
+<h1 class="text-center"> Details of your Product </h1>
+<table class="table table-bordered text-center">
+    <thead>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th>Image</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of details">
+            <td>{{ product.name }} </td>
+            <td>{{ product.price }} </td>
+            <td>{{ product.description}} </td>
+            <td><img src="../../../assets/iphone7.jpg" width="400px" height="400px"></td>
+        </tr>
+    </tbody>
+</table>

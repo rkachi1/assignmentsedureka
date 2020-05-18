@@ -12,6 +12,8 @@ import { FilterPipe } from './pipes/filter.pipe';
 import { HomeComponent } from './components/home/home.component';
 import { ProductComponent } from './components/product/product.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
+import { ProductService } from './services/product.service';
 
 @NgModule({
   declarations: [
@@ -22,14 +24,15 @@ import { ContactComponent } from './components/contact/contact.component';
     FilterPipe,
     HomeComponent,
     ProductComponent,
-    ContactComponent
+    ContactComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [EmployeeService],
+  providers: [EmployeeService, ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
