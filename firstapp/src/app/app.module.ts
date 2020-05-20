@@ -16,7 +16,8 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { ProductService } from './services/product.service';
 import {FormsModule} from '@angular/forms';
 import { TemplateformComponent } from './components/templateform/templateform.component';
-
+import { ReactiveformComponent } from './components/reactiveform/reactiveform.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,13 +30,15 @@ import { TemplateformComponent } from './components/templateform/templateform.co
     ProductComponent,
     ContactComponent,
     ProductListComponent,
-    TemplateformComponent
+    TemplateformComponent,
+    ReactiveformComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [EmployeeService, ProductService],
   bootstrap: [AppComponent]
