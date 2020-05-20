@@ -1,0 +1,48 @@
+
+<form #frm="ngForm" novalidate (ngSubmit)="submitform(frm)" class="col-md-6">
+    <div class="form-group col-md-6">
+        <label for="fullname">Fullname</label>
+        <input type="text" class="form-control" placeholder="Enter your filename.... " name="fullname" ngModel>
+    </div>
+    <div class="form-group col-md-6">
+        <label for="email">Email:</label>
+        <input type="text" class="form-control" placeholder="Enter your Email.... " name="email" ngModel>
+    </div>
+    <div class="form-group col-md-6">
+        <label for="phoneno">Phone Number</label>
+        <input type="text" class="form-control" placeholder="Enter your phoneno.... " name="phonenumber" ngModel>
+    </div>
+    <div class="form-group col-md-6">
+        <label for="password">Confirm Password:</label>
+        <input type="password" class="form-control" placeholder=" Enter your Password.... " id="password" name="password" ngModel>
+    </div>
+    <div class="form-group col-md-6">
+        <label for="confirmpassword">Confirm Password:</label>
+        <input type="password" class="form-control" placeholder="Confirm password.... " id="confirmpassword" name="confirmpassword" ngModel>
+    </div>
+    <div class="col-md-6">
+        <button class="btn btn-primary text-floral-white">Submit</button>
+    </div>
+</form>
+
+<h1>Your details are as follows:</h1>
+<table class="table">
+   <thead>
+       <tr>
+           <th>Fullname</th>
+           <th>Email</th>
+           <th>phonenumber</th>
+           <th>password</th>
+           <th>confirmpassword</th>
+       </tr>
+   </thead>
+   <tbody *ngFor="let data of formdetails">
+       <tr>
+           <td> {{ data.fullname }}</td>
+           <td> {{ data.email }}</td>
+           <td> {{ data.phonenumber }}</td>
+           <td> {{ data.password }}</td>
+           <td> {{ data.confirmpassword }}</td>
+       </tr>
+   </tbody>
+</table>

@@ -14,6 +14,9 @@ import { ProductComponent } from './components/product/product.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductService } from './services/product.service';
+import {FormsModule} from '@angular/forms';
+import { TemplateformComponent } from './components/templateform/templateform.component';
+
 
 @NgModule({
   declarations: [
@@ -25,12 +28,14 @@ import { ProductService } from './services/product.service';
     HomeComponent,
     ProductComponent,
     ContactComponent,
-    ProductListComponent
+    ProductListComponent,
+    TemplateformComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [EmployeeService, ProductService],
   bootstrap: [AppComponent]
