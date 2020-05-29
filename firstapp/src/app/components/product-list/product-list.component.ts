@@ -24,19 +24,9 @@ export class ProductListComponent implements OnInit {
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
     this.productservice.getproductbyid(this.id).subscribe(data=>{
-        console.log(data);
         this.details = data;
     })
   }
-
-
-//   getproductdetail(){
-//     this.productservice.getproductbyid(this.id).subscribe(
-//       data=>{
-//         console.log(data);
-//         this.details = data;
-//       })
-//   }
   
 
 }

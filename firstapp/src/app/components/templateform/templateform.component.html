@@ -1,27 +1,56 @@
-
 <form #frm="ngForm" novalidate (ngSubmit)="submitform(frm)" class="col-md-6">
-    <div class="form-group col-md-6">
+    <div class="form-group col-md-6 offset-md-6">
         <label for="fullname">Fullname</label>
-        <input type="text" class="form-control" placeholder="Enter your filename.... " name="fullname" ngModel>
+        <input type="text" class="form-control" placeholder="Enter your filename.... " name="fullname" id="fullname" ngModel #fullnameofuser="ngModel" required>
+        <div *ngIf="fullnameofuser.touched && fullnameofuser.errors?.required" class="alert alert-danger mt-3 mb-3">     <!--save navigation operator being used in order to protect null and undefined values and used for null reference expressions -->
+            <p> Fullname is required </p>
+        </div>
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-md-6 offset-md-6">
         <label for="email">Email:</label>
-        <input type="text" class="form-control" placeholder="Enter your Email.... " name="email" ngModel>
-    </div>
-    <div class="form-group col-md-6">
+        <input type="text" class="form-control" placeholder="Enter your Email.... " name="email" ngModel required pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" #emailofuser="ngModel">
+            <div *ngIf="emailofuser.touched && emailofuser.errors?.required"class="alert alert-danger mt-3 mb-3">     
+                <p> Email is required </p>
+            </div>
+            <div *ngIf="emailofuser.errors?.pattern" class="alert alert-danger mt-3">
+                <p class="text-center">Please enter a valid Email</p>
+            </div>
+    </div>    
+    <div class="form-group col-md-6 offset-md-6">
         <label for="phoneno">Phone Number</label>
-        <input type="text" class="form-control" placeholder="Enter your phoneno.... " name="phonenumber" ngModel>
-    </div>
-    <div class="form-group col-md-6">
-        <label for="password">Confirm Password:</label>
-        <input type="password" class="form-control" placeholder=" Enter your Password.... " id="password" name="password" ngModel>
-    </div>
-    <div class="form-group col-md-6">
+        <input type="text" class="form-control" placeholder="Enter your phoneno.... " name="phonenumber" ngModel #phoneofuser="ngModel" required pattern="[0-9]*"  minlength="10" maxlength="10">
+        <div *ngIf="phoneofuser.touched && phoneofuser.errors?.required" class="alert alert-danger mt-3 mb-3">     
+            <p> Phonenumber is required </p>
+        </div>
+        <div *ngIf="phoneofuser.errors?.pattern" class="alert alert-danger mt-3">
+            <p class="text-center">Please enter a valid Phonenumber</p>
+        </div>
+        <div *ngIf="phoneofuser.errors?.minlength" class="alert alert-danger mt-3">
+            <p class="text-center">Phonenumber must be at least 10 numbers long</p>
+        </div>
+        <div *ngIf="phoneofuser.errors?.maxlength" class="alert alert-danger mt-3">
+            <p class="text-center">Phonenumber cannot be more than 10 numbers </p>
+        </div>
+     </div>   
+    <div class="form-group col-md-6 offset-md-6">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" placeholder=" Enter your Password.... " id="password" name="password" ngModel #passwordofuser="ngModel" required>
+        <div *ngIf="passwordofuser.touched && passwordofuser.errors?.required" class="alert alert-danger mt-3 mb-3">
+            <p> Password is required </p>
+        </div>
+    </div>    
+    <div class="form-group col-md-6 offset-md-6">
         <label for="confirmpassword">Confirm Password:</label>
-        <input type="password" class="form-control" placeholder="Confirm password.... " id="confirmpassword" name="confirmpassword" ngModel>
-    </div>
-    <div class="col-md-6">
-        <button class="btn btn-primary text-floral-white">Submit</button>
+        <input type="password" appConfirmpasswordvalidator="password" class="form-control" placeholder="Confirm password.... " id="confirmpassword" name="confirmpassword" #confirmpasswordofuser="ngModel" ngModel required>
+        <div *ngIf="confirmpasswordofuser.touched && confirmpasswordofuser.errors?.required" class="alert alert-danger mt-3 mb-3">     
+            <p> Confirm Password field is required </p>
+        </div>
+        <div *ngIf="confirmpasswordofuser.touched && confirmpasswordofuser.errors?.notEqual" class="alert alert-danger mt-3 mb-3">     
+            <p> Confirm Password and password do not match </p>
+        </div>
+    </div>    
+    <div class="col-md-6 offset-md-6">
+        <button class="btn btn-primary text-floral-white" [disabled]="frm.invalid">Submit</button>
     </div>
 </form>
 
